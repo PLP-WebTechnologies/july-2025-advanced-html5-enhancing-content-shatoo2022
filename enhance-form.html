@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        header, main, footer {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+        }
+        section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #aaa;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        ul {
+            list-style: square;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            padding: 10px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Registration Portal</h1>
+    <p>Fill in your details below to register</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Welcome Information</h2>
+        <p>This form allows you to register for our program. Please ensure all required fields are filled in correctly.</p>
+
+        <h3>Benefits of Joining:</h3>
+        <ul>
+            <li>Access to exclusive resources</li>
+            <li>One-on-one mentorship</li>
+            <li>Networking opportunities</li>
+        </ul>
+
+        <h3>Program Schedule:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Orientation</td>
+                    <td>9:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Workshop</td>
+                    <td>10:00 AM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Networking</td>
+                    <td>4:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Registration Form</h2>
+        <form action="#" method="post" autocomplete="on">
+            
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="e.g. example@mail.com" required autocomplete="email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. +234 8012345678" pattern="^\+?\d{10,15}$" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">-- Select Gender --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="prefer-not">Prefer not to say</option>
+            </select>
+
+            <label>Skills:</label>
+            <input type="checkbox" id="html" name="skills" value="HTML"> <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="skills" value="CSS"> <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="skills" value="JavaScript"> <label for="js">JavaScript</label>
+
+            <label>Mode of Attendance:</label>
+            <input type="radio" id="online" name="mode" value="online" required> <label for="online">Online</label>
+            <input type="radio" id="onsite" name="mode" value="onsite" required> <label for="onsite">Onsite</label>
+
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself" required></textarea>
+
+            <label for="readonly-id">Registration ID (readonly):</label>
+            <input type="text" id="readonly-id" name="regid" value="REG-2025-001" readonly>
+
+            <label for="photo">Upload Profile Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Promotional Video</h2>
+        <video controls width="100%">
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+</main>
+
+<footer>
+    &copy; 2025 Registration Portal. All rights reserved.
+</footer>
+
+</body>
+</html>
